@@ -177,7 +177,7 @@ footer{
     width: 50%;
 }
 
-footer input[type="text"], footer input[type="email"] footer input[type="textarea"]{
+footer input[type="text"], footer input[type="email"], footer input[type="textarea"]{
     height: 64px;
     border-radius: 5px;
     background-color: white;
@@ -190,4 +190,53 @@ footer input[type="text"], footer input[type="email"] footer input[type="textare
 
 footer input{
     display: block;
+}
+
+/* Media query */
+.hide{
+    display: none;
+}
+
+/* smaller device */
+@media screen and (max-width: 576px){
+    .skills-container,
+    .resume-container,.banner,
+    nav,
+    nav>ul{
+        flex-direction: column;
+    }
+
+    nav>ul{
+        gap: 20px;
+    }
+
+    .btn-primary{
+        margin-bottom: 20px;
+    }
+
+    footer, .about-items{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+
+    footer input[type="text"], 
+    footer input[type="email"], 
+    footer input[type="textarea"]{
+        width: calc(100% - 40px);
+    }
+
+    .about, .banner{
+        padding: 20px;
+        margin: 20px;
+    }
+    .header{
+        background-image: none;
+    }
+
+    .banner-profile-pic{
+        width: 100%;
+    }
 }
